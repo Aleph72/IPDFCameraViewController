@@ -342,6 +342,8 @@
                  if (rectangleFeature)
                  {
                      enhancedImage = [self correctPerspectiveForImage:enhancedImage withFeatures:rectangleFeature];
+                     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"imageCropped"];
+                     [[NSUserDefaults standardUserDefaults] synchronize];
                  }
              }
              
